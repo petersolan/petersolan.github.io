@@ -16,6 +16,7 @@ CROPS = {
     "census": (0, 45, 840, 778),           # drop the GeoLibre layer button in the corner
     "greenspace": (640, 25, 1218, 520),    # the summer-greenness map only (source has two maps)
     "fallen_trees": (24, 22, 612, 534),    # the aerial photo without the app window around it
+    "databricks": (400, 0, 1400, 900),     # the map of the results site, without the side panel
 }
 
 
