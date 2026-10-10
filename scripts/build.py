@@ -13,6 +13,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "_site"
+URL = "https://petersolan.github.io/"  # link previews (LinkedIn, Slack) need absolute URLs
 e = html.escape
 
 
@@ -145,7 +146,10 @@ def page(cfg: dict) -> str:
 <meta name="description" content="{e(pr['role'])} portfolio: {e(', '.join(p['title'] for p in current))}.">
 <meta property="og:title" content="{e(pr['name'])} · {e(pr['role'])}">
 <meta property="og:description" content="{e(pr['intro'])}">
-<meta property="og:image" content="{e(current[0]['image'])}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{URL}">
+<meta property="og:image" content="{URL}{e(current[0]['image'])}">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
