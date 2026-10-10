@@ -13,7 +13,7 @@ profile:
   looking_for: Open to geospatial data engineering roles.
   links:
     github: https://github.com/petersolan
-    linkedin: ""        # e.g. https://www.linkedin.com/in/your-profile
+    linkedin: https://www.linkedin.com/in/petersolan/
     email: ""           # e.g. name@example.com
     cv: ""              # e.g. assets/cv.pdf (add the PDF to assets/)
 
