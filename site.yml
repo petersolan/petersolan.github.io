@@ -1,0 +1,99 @@
+# Content for petersolan.github.io. Edit this file, push, and the site rebuilds (scripts/build.py).
+# Empty links are simply not shown, so nothing half-finished ever appears on the live site.
+
+profile:
+  name: Peter S
+  role: Geospatial data engineer
+  location: Exeter, UK
+  coordinates: "50.7184° N, 3.5339° W"
+  intro: >-
+    I build data pipelines that turn open geospatial and demographic data into reliable,
+    documented datasets and maps: from LiDAR and Sentinel-2 to census, postcode and network data,
+    on Databricks, Azure and PostGIS.
+  looking_for: Open to geospatial data engineering roles.
+  links:
+    github: https://github.com/petersolan
+    linkedin: ""        # e.g. https://www.linkedin.com/in/your-profile
+    email: ""           # e.g. name@example.com
+    cv: ""              # e.g. assets/cv.pdf (add the PDF to assets/)
+
+projects:
+  - id: census
+    title: GB Census Population Map
+    repo: https://github.com/petersolan/GB-Census-Population-Map
+    live: https://petersolan.github.io/GB-Census-Population-Map/cog.html
+    image: assets/img/census.webp
+    image_alt: Population per 10 m cell in central London, dark basemap with red population cells
+    summary: >-
+      Census 2021/2022 population shared out to 41.6 million address points (UPRNs) across Great
+      Britain using building footprints, then rasterised to a 10 m grid and served as a
+      cloud-optimised GeoTIFF to an interactive map with click-to-identify.
+    tags: [Python, Census 2021, UPRN, Dasymetric mapping, Cloud-optimised GeoTIFF, GeoLibre]
+
+  - id: greenspace
+    title: Green Space Indicators for Devon
+    repo: https://github.com/petersolan/GB-Green-Space-Indicators
+    image: assets/img/greenspace.webp
+    image_alt: Mean summer greenness (Sentinel-2 NDVI) for every LSOA in Devon, green choropleth
+    summary: >-
+      Share of residents within 300 m of public green space and summer greenness from Sentinel-2,
+      for every Devon LSOA. Built as a geospatial lakehouse on Azure (ADLS Gen2, Delta Lake) and
+      published with ISO 19115, DCAT-AP and SDMX metadata.
+    tags: [Azure, Delta Lake, Sentinel-2, Xarray, ISO 19115, DCAT-AP, SDMX]
+
+  - id: fibre
+    title: Fibre Planning Pipeline
+    repo: https://github.com/petersolan/GB-Fibre-Planning-Pipeline
+    image: assets/img/fibre.webp
+    image_alt: Proposed cable network in central Exeter, gap streets in red and connecting routes in blue
+    summary: >-
+      Which premises lack gigabit broadband, and which roads reach them: Ofcom coverage, census
+      population per address and OS Open Roads combined into a ranked build plan. A Kedro pipeline
+      into PostGIS, with a FastAPI service, GeoServer layers and a QGIS plugin.
+    tags: [Kedro, PostGIS, pgRouting, Alembic, FastAPI, GeoServer, QGIS, Docker]
+
+  - id: lidar
+    title: LiDAR Building Footprints
+    repo: https://github.com/petersolan/LiDAR-Building-Footprints
+    image: assets/img/lidar.webp
+    image_alt: Building footprints in central Exeter shaded by height above ground over a LiDAR hillshade
+    summary: >-
+      Building footprints and heights extracted from Environment Agency LiDAR for Exeter, and
+      validated against Ordnance Survey, Microsoft and OpenStreetMap buildings.
+    tags: [LiDAR, Remote sensing, Machine learning, Sentinel-2, QGIS]
+
+  - id: signal
+    title: Exeter Signal Atlas
+    repo: https://github.com/petersolan/Mobile-Signal-Strength
+    live: https://petersolan.github.io/Mobile-Signal-Strength/
+    image: assets/img/signal.webp
+    image_alt: 3D columns of 4G signal strength along Exeter's roads on a light basemap
+    summary: >-
+      Ofcom drive-test 4G and 5G measurements on Exeter's roads, binned to a 100 m Ordnance Survey
+      grid and shown as an interactive 3D map with operator, year and network filters.
+    tags: [Ofcom open data, DuckDB, GeoParquet, MapLibre, OpenStreetMap]
+
+  - id: trees
+    title: Fallen Trees from Aerial Imagery
+    earlier: true
+    repo: https://github.com/petersolan/DL-CNN-Aerial-Images
+    image: assets/img/fallen_trees.webp
+    image_alt: Aerial photo of storm damage with fallen trees between houses
+    summary: >-
+      MSc thesis: detecting storm-felled trees in urban aerial imagery with a YOLOv3 convolutional
+      neural network.
+    tags: [Deep learning, YOLOv3, Computer vision]
+
+# Which projects show which skill (project ids from above)
+skills:
+  - {skill: "Python data pipelines", projects: [census, greenspace, fibre, lidar, signal]}
+  - {skill: "SQL and spatial databases (PostGIS, DuckDB)", projects: [fibre, greenspace, signal]}
+  - {skill: "Cloud and lakehouse (Azure, Delta Lake)", projects: [greenspace]}
+  - {skill: "Pipeline orchestration (Kedro)", projects: [fibre]}
+  - {skill: "APIs and OGC services (FastAPI, GeoServer)", projects: [fibre]}
+  - {skill: "Web mapping (MapLibre, GeoLibre)", projects: [census, signal]}
+  - {skill: "Raster and cloud formats (COG, PMTiles, GeoParquet)", projects: [census, signal]}
+  - {skill: "Remote sensing (LiDAR, Sentinel-2)", projects: [lidar, greenspace]}
+  - {skill: "Metadata standards (ISO 19115, DCAT-AP, SDMX)", projects: [greenspace]}
+  - {skill: "QGIS and PyQGIS", projects: [fibre, greenspace, lidar]}
+  - {skill: "Machine learning", projects: [lidar, trees]}

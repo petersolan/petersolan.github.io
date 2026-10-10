@@ -1,0 +1,5 @@
+# build output: GitHub Actions rebuilds it from site.yml on every push
+_site/
+# full-size source screenshots; only the optimised WebP cards are published
+assets/img/src/
+__pycache__/
