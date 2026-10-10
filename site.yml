@@ -4,8 +4,8 @@
 profile:
   name: Peter S
   role: Geospatial data engineer
-  location: Exeter, UK
-  coordinates: "50.7184° N, 3.5339° W"
+  location: London, UK
+  coordinates: "51.5281° N, 0.1331° W"   # London Euston station
   intro: >-
     I build data pipelines that turn open geospatial and demographic data into reliable,
     documented datasets and maps: from LiDAR and Sentinel-2 to census, postcode and network data,
