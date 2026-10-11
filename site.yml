@@ -27,8 +27,9 @@ projects:
     summary: >-
       A medallion pipeline on Databricks joining (synthetic) GP registrations to NHS and ONS postcode,
       ODS and boundary data: native spatial joins in British National Grid, versioned lookups,
-      reconciliation after every join, pseudonymisation and disclosure control.
-    tags: [Databricks, PySpark, Delta Lake, Unity Catalog, Spatial SQL, Asset Bundles, GitHub Actions]
+      reconciliation, pseudonymisation and disclosure control. Calibrated against real NHS England
+      registration counts, which exposed a generator bug; an AI/BI dashboard deployed as code.
+    tags: [Databricks, PySpark, Delta Lake, Unity Catalog, Spatial SQL, Asset Bundles, AI/BI Dashboards, GitHub Actions]
 
   - id: census
     title: GB Census Population Map
