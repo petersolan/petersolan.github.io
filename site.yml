@@ -69,15 +69,16 @@ projects:
     tags: [Kedro, PostGIS, pgRouting, Alembic, FastAPI, GeoServer, QGIS, Docker]
 
   - id: lidar
-    title: LiDAR Building Footprints
-    repo: https://github.com/petersolan/LiDAR-Building-Footprints
-    live: https://petersolan.github.io/LiDAR-Building-Footprints/
+    title: Exeter 3D City Model
+    repo: https://github.com/petersolan/Exeter-3D-City-Model
+    live: https://petersolan.github.io/Exeter-3D-City-Model/
     image: assets/img/lidar.webp
     image_alt: Building footprints in central Exeter shaded by height above ground over a LiDAR hillshade
     summary: >-
-      Building footprints and heights extracted from Environment Agency LiDAR for Exeter, and
-      validated against Ordnance Survey, Microsoft and OpenStreetMap buildings.
-    tags: [LiDAR, Remote sensing, Machine learning, Sentinel-2, QGIS]
+      A LiDAR digital twin base layer: building footprints with heights, 127k individual tree crowns
+      and terrain for Exeter from Environment Agency LiDAR, validated against Ordnance Survey and
+      outperforming Microsoft and OpenStreetMap buildings, in a 3D web viewer.
+    tags: [LiDAR, 3D city model, Machine learning, Sentinel-2, OpenStreetMap, MapLibre]
 
   - id: signal
     title: Exeter Signal Atlas
