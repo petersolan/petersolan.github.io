@@ -13,6 +13,7 @@ SRC, OUT = ROOT / "assets" / "img" / "src", ROOT / "assets" / "img"
 WIDTH, RATIO = 1000, 16 / 10
 CROPS = {
     "signal": (143, 342, 908, 900),        # just the map panel of the Exeter Signal Atlas
+    "coverage": (0, 175, 1119, 874),       # a 16:10 band through the middle of the coverage checker map
     "census": (0, 45, 840, 778),           # drop the GeoLibre layer button in the corner
     "greenspace": (640, 25, 1218, 520),    # the summer-greenness map only (source has two maps)
     "fallen_trees": (24, 22, 612, 534),    # the aerial photo without the app window around it

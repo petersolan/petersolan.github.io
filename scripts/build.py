@@ -48,14 +48,15 @@ def links(profile: dict) -> str:
 
 def card(p: dict) -> str:
     tags = "".join(f"<li>{e(t)}</li>" for t in p.get("tags", []))
-    buttons = []
-    if p.get("live"):
-        buttons.append(f'<a class="btn primary" href="{e(p["live"])}">Live demo</a>')
+    # several live pages: demos: [{label, url}], the first one primary; otherwise one "Live demo"
+    demos = p.get("demos") or ([{"label": "Live demo", "url": p["live"]}] if p.get("live") else [])
+    buttons = [f'<a class="btn{" primary" if i == 0 else ""}" href="{e(d["url"])}">{e(d["label"])}</a>'
+               for i, d in enumerate(demos)]
     buttons.append(f'<a class="btn" href="{e(p["repo"])}">Code</a>')
     earlier = '<span class="badge">Earlier work</span>' if p.get("earlier") else ""
     return f"""
     <article class="card" id="{e(p['id'])}">
-      <a class="thumb" href="{e(p.get('live') or p['repo'])}" tabindex="-1" aria-hidden="true">
+      <a class="thumb" href="{e(demos[0]['url'] if demos else p['repo'])}" tabindex="-1" aria-hidden="true">
         <img src="{e(p['image'])}" alt="" loading="lazy" width="1000" height="625"></a>
       <div class="body">
         <h3>{e(p['title'])} {earlier}</h3>

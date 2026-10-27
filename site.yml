@@ -18,6 +18,21 @@ profile:
     cv: ""              # e.g. assets/cv.pdf (add the PDF to assets/)
 
 projects:
+  - id: signal
+    title: Exeter 4G/5G Coverage Checker & Signal Atlas
+    repo: https://github.com/petersolan/Mobile-Signal-Strength
+    demos:
+      - {label: Coverage checker, url: "https://petersolan.github.io/Mobile-Signal-Strength/coverage.html"}
+      - {label: Signal Atlas, url: "https://petersolan.github.io/Mobile-Signal-Strength/"}
+    image: assets/img/coverage.webp
+    image_alt: Modelled 5G signal of Three at 3.6 GHz across Exeter, strong around the masts and patchy between them
+    summary: >-
+      A mobile coverage model from Ofcom's open drive tests: 531 4G cells located from the measurements,
+      terrain diffraction over Environment Agency LiDAR, clutter loss fitted per operator, and 5G on the
+      estimated masts. Validated on held-out areas (11-15 dB RMSE), then counted against 152,000 Census
+      residents to show who gets indoor 4G or good 5G from each operator, in any area you draw.
+    tags: [RF propagation modelling, 4G/5G, Ofcom open data, LiDAR, Census 2021, Model validation, MapLibre]
+
   - id: databricks
     title: Demographic & Geospatial Pipelines on Databricks
     repo: https://github.com/petersolan/GB-Demographic-Geospatial-Databricks
@@ -80,17 +95,6 @@ projects:
       outperforming Microsoft and OpenStreetMap buildings, in a 3D web viewer.
     tags: [LiDAR, 3D city model, Machine learning, Sentinel-2, OpenStreetMap, MapLibre]
 
-  - id: signal
-    title: Exeter Signal Atlas
-    repo: https://github.com/petersolan/Mobile-Signal-Strength
-    live: https://petersolan.github.io/Mobile-Signal-Strength/
-    image: assets/img/signal.webp
-    image_alt: 3D columns of 4G signal strength along Exeter's roads on a light basemap
-    summary: >-
-      Ofcom drive-test 4G and 5G measurements on Exeter's roads, binned to a 100 m Ordnance Survey
-      grid and shown as an interactive 3D map with operator, year and network filters.
-    tags: [Ofcom open data, DuckDB, GeoParquet, MapLibre, OpenStreetMap]
-
   - id: trees
     title: Fallen Trees from Aerial Imagery
     earlier: true
@@ -111,10 +115,11 @@ skills:
   - {skill: "APIs and OGC services (FastAPI, GeoServer)", projects: [fibre]}
   - {skill: "Web mapping (MapLibre, GeoLibre)", projects: [databricks, census, greenspace, fibre, lidar, signal]}
   - {skill: "Raster and cloud formats (COG, PMTiles, GeoParquet)", projects: [databricks, census, signal]}
-  - {skill: "Remote sensing (LiDAR, Sentinel-2)", projects: [lidar, greenspace]}
+  - {skill: "Remote sensing (LiDAR, Sentinel-2)", projects: [signal, lidar, greenspace]}
   - {skill: "Data quality and reconciliation", projects: [databricks, greenspace]}
   - {skill: "Privacy: pseudonymisation, disclosure control", projects: [databricks]}
   - {skill: "Testing and CI/CD (pytest, GitHub Actions)", projects: [databricks, fibre, greenspace]}
   - {skill: "Metadata standards (ISO 19115, DCAT-AP, SDMX)", projects: [greenspace]}
   - {skill: "QGIS and PyQGIS", projects: [fibre, greenspace, lidar]}
   - {skill: "Machine learning", projects: [lidar, trees]}
+  - {skill: "Statistical modelling and validation", projects: [signal, lidar]}
