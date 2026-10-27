@@ -25,11 +25,11 @@ projects:
       - {label: Coverage checker, url: "https://petersolan.github.io/Mobile-Signal-Strength/coverage.html"}
       - {label: Signal Atlas, url: "https://petersolan.github.io/Mobile-Signal-Strength/"}
     image: assets/img/coverage.webp
-    image_alt: Modelled 5G signal of Three at 3.6 GHz across Exeter, strong around the masts and patchy between them
+    image_alt: Modelled 5G signal of EE across central Exeter, strong around the masts and patchy behind hills
     summary: >-
       A mobile coverage model from Ofcom's open drive tests: 531 4G cells located from the measurements,
       terrain diffraction over Environment Agency LiDAR, clutter loss fitted per operator, and 5G on the
-      estimated masts. Validated on held-out areas (11-15 dB RMSE), then counted against 152,000 Census
+      estimated masts. Validated on held-out areas (12-15 dB RMSE), then counted against 152,000 Census
       residents to show who gets indoor 4G or good 5G from each operator, in any area you draw.
     tags: [RF propagation modelling, 4G/5G, Ofcom open data, LiDAR, Census 2021, Model validation, MapLibre]
 
@@ -59,17 +59,17 @@ projects:
       cloud-optimised GeoTIFF to an interactive map with click-to-identify.
     tags: [Python, Census 2021, UPRN, Dasymetric mapping, Cloud-optimised GeoTIFF, GeoLibre]
 
-  - id: greenspace
-    title: Green Space Indicators for Devon
-    repo: https://github.com/petersolan/GB-Green-Space-Indicators
-    live: https://petersolan.github.io/GB-Green-Space-Indicators/
-    image: assets/img/greenspace.webp
-    image_alt: Mean summer greenness (Sentinel-2 NDVI) for every LSOA in Devon, green choropleth
+  - id: lidar
+    title: Exeter 3D City Model
+    repo: https://github.com/petersolan/Exeter-3D-City-Model
+    live: https://petersolan.github.io/Exeter-3D-City-Model/
+    image: assets/img/lidar.webp
+    image_alt: Building footprints in central Exeter shaded by height above ground over a LiDAR hillshade
     summary: >-
-      Share of residents within 300 m of public green space and summer greenness from Sentinel-2,
-      for every Devon LSOA. Built as a geospatial lakehouse on Azure (ADLS Gen2, Delta Lake) and
-      published with ISO 19115, DCAT-AP and SDMX metadata.
-    tags: [Azure, Delta Lake, Sentinel-2, Xarray, ISO 19115, DCAT-AP, SDMX]
+      A LiDAR digital twin base layer: building footprints with heights, 127k individual tree crowns
+      and terrain for Exeter from Environment Agency LiDAR, validated against Ordnance Survey and
+      outperforming Microsoft and OpenStreetMap buildings, in a 3D web viewer.
+    tags: [LiDAR, 3D city model, Machine learning, Sentinel-2, OpenStreetMap, MapLibre]
 
   - id: fibre
     title: Fibre Planning Pipeline
@@ -83,17 +83,17 @@ projects:
       into PostGIS, with a FastAPI service, GeoServer layers and a QGIS plugin.
     tags: [Kedro, PostGIS, pgRouting, Alembic, FastAPI, GeoServer, QGIS, Docker]
 
-  - id: lidar
-    title: Exeter 3D City Model
-    repo: https://github.com/petersolan/Exeter-3D-City-Model
-    live: https://petersolan.github.io/Exeter-3D-City-Model/
-    image: assets/img/lidar.webp
-    image_alt: Building footprints in central Exeter shaded by height above ground over a LiDAR hillshade
+  - id: greenspace
+    title: Green Space Indicators for Devon
+    repo: https://github.com/petersolan/GB-Green-Space-Indicators
+    live: https://petersolan.github.io/GB-Green-Space-Indicators/
+    image: assets/img/greenspace.webp
+    image_alt: Mean summer greenness (Sentinel-2 NDVI) for every LSOA in Devon, green choropleth
     summary: >-
-      A LiDAR digital twin base layer: building footprints with heights, 127k individual tree crowns
-      and terrain for Exeter from Environment Agency LiDAR, validated against Ordnance Survey and
-      outperforming Microsoft and OpenStreetMap buildings, in a 3D web viewer.
-    tags: [LiDAR, 3D city model, Machine learning, Sentinel-2, OpenStreetMap, MapLibre]
+      Share of residents within 300 m of public green space and summer greenness from Sentinel-2,
+      for every Devon LSOA. Built as a geospatial lakehouse on Azure (ADLS Gen2, Delta Lake) and
+      published with ISO 19115, DCAT-AP and SDMX metadata.
+    tags: [Azure, Delta Lake, Sentinel-2, Xarray, ISO 19115, DCAT-AP, SDMX]
 
   - id: trees
     title: Fallen Trees from Aerial Imagery
