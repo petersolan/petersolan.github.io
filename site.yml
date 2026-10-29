@@ -19,19 +19,22 @@ profile:
 
 projects:
   - id: signal
-    title: Exeter 4G/5G Coverage Checker & Signal Atlas
+    title: Exeter 4G/5G Coverage Checker & Network Business Case
     repo: https://github.com/petersolan/Mobile-Signal-Strength
     demos:
       - {label: Coverage checker, url: "https://petersolan.github.io/Mobile-Signal-Strength/coverage.html"}
       - {label: Signal Atlas, url: "https://petersolan.github.io/Mobile-Signal-Strength/"}
+      - {label: Business case, url: "https://github.com/petersolan/Mobile-Signal-Strength#business-case-coverage-gaps-opportunities-and-where-to-build"}
     image: assets/img/coverage.webp
     image_alt: Modelled 5G signal of EE across central Exeter, strong around the masts and patchy behind hills
     summary: >-
       A mobile coverage model from Ofcom's open drive tests: 531 4G cells located from the measurements,
       terrain diffraction over Environment Agency LiDAR, clutter loss fitted per operator, and 5G on the
       estimated masts. Validated on held-out areas (12-15 dB RMSE), then counted against 152,000 Census
-      residents to show who gets indoor 4G or good 5G from each operator, in any area you draw.
-    tags: [RF propagation modelling, 4G/5G, Ofcom open data, LiDAR, Census 2021, Model validation, MapLibre]
+      residents to show who gets indoor 4G or good 5G from each operator, in any area you draw. On top, a
+      business case: where each operator loses customers to rivals, which places matter most (Census
+      demographics), and a costed site plan with break-even per site, under two calibration scenarios.
+    tags: [RF propagation modelling, 4G/5G, Competitive analysis, Business case, Ofcom open data, LiDAR, Census 2021, Model validation, MapLibre]
 
   - id: databricks
     title: Demographic & Geospatial Pipelines on Databricks
