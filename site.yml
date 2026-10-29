@@ -24,6 +24,7 @@ projects:
     demos:
       - {label: Coverage checker, url: "https://petersolan.github.io/Mobile-Signal-Strength/coverage.html"}
       - {label: Signal Atlas, url: "https://petersolan.github.io/Mobile-Signal-Strength/"}
+      - {label: Executive briefing, url: "https://petersolan.github.io/Mobile-Signal-Strength/deck.html"}
       - {label: Business case, url: "https://github.com/petersolan/Mobile-Signal-Strength#business-case-coverage-gaps-opportunities-and-where-to-build"}
     image: assets/img/coverage.webp
     image_alt: Modelled 5G signal of EE across central Exeter, strong around the masts and patchy behind hills
@@ -33,7 +34,8 @@ projects:
       estimated masts. Validated on held-out areas (12-15 dB RMSE), then counted against 152,000 Census
       residents to show who gets indoor 4G or good 5G from each operator, in any area you draw. On top, a
       business case: where each operator loses customers to rivals, which places matter most (Census
-      demographics), and a costed site plan with break-even per site, under two calibration scenarios.
+      demographics), a costed site plan with break-even per site under two calibration scenarios, the same
+      analysis in SQL, a pilot design for the drive test, and an executive briefing.
     tags: [RF propagation modelling, 4G/5G, Competitive analysis, Business case, Ofcom open data, LiDAR, Census 2021, Model validation, MapLibre]
 
   - id: databricks
