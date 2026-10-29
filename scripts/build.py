@@ -179,6 +179,7 @@ def page(cfg: dict) -> str:
 </main>
 <footer><div class="wrap">Built from <a href="https://github.com/petersolan/petersolan.github.io">site.yml</a>
  with a small Python script. Project data: Open Government Licence v3.0 sources as credited in each repository.</div></footer>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "3211474cf009410a88d7addf6d1ba4a8"}}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
 """
