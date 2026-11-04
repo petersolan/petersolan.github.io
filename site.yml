@@ -107,9 +107,10 @@ projects:
     image: assets/img/fallen_trees.webp
     image_alt: Aerial photo of storm damage with fallen trees between houses
     summary: >-
-      MSc thesis: detecting storm-felled trees in urban aerial imagery with a YOLOv3 convolutional
-      neural network.
-    tags: [Deep learning, YOLOv3, Computer vision]
+      MSc dissertation: finding fallen trees in NOAA aerial images of New Orleans after Hurricane Ida.
+      1,000 trees labelled by hand in QGIS, a YOLOv3 detector found 96% of them in the test set at
+      about 5,000 images an hour (a person manages ~600), with its limits written up honestly.
+    tags: [Deep learning, YOLOv3, Computer vision, Aerial imagery, QGIS]
 
 # Which projects show which skill (project ids from above)
 skills:
@@ -120,7 +121,7 @@ skills:
   - {skill: "APIs and OGC services (FastAPI, GeoServer)", projects: [fibre]}
   - {skill: "Web mapping (MapLibre, GeoLibre)", projects: [databricks, census, greenspace, fibre, lidar, signal]}
   - {skill: "Raster and cloud formats (COG, PMTiles, GeoParquet)", projects: [databricks, census, signal]}
-  - {skill: "Remote sensing (LiDAR, Sentinel-2)", projects: [signal, lidar, greenspace]}
+  - {skill: "Remote sensing (LiDAR, Sentinel-2, aerial imagery)", projects: [signal, lidar, greenspace, trees]}
   - {skill: "Data quality and reconciliation", projects: [databricks, greenspace]}
   - {skill: "Privacy: pseudonymisation, disclosure control", projects: [databricks]}
   - {skill: "Testing and CI/CD (pytest, GitHub Actions)", projects: [databricks, fibre, greenspace]}
